@@ -2,6 +2,7 @@ name: MineEvents
 version: '${project.version}'
 main: com.github.idimabr.MineEvents
 authors: [Rapha(iDimaBR)]
+depend: [WorldGuard, WorldEdit]
 commands:
   aevento:
   evento:

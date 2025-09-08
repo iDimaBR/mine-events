@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.idimabr</groupId>
-    <artifactId>VitinEvents</artifactId>
+    <artifactId>MineEvents</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>VitinEvents</name>
+    <name>MineEvents</name>
 
     <properties>
         <java.version>1.8</java.version>
