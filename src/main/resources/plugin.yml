@@ -1,0 +1,7 @@
+name: VitinEvents
+version: '${project.version}'
+main: com.github.idimabr.VitinEvents
+authors: [Rapha(iDimaBR)]
+commands:
+  aevento:
+  evento:

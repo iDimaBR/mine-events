@@ -1,0 +1,293 @@
+events:
+  hiddenseek:
+    name: "Hidden & Seek"
+    type: HIDE_AND_SEEK
+    calls: 2
+    calls-time: 10
+    min-players: 2
+    empty-inventory: true
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento Hidden & Seek!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento Hidden & Seek iniciou!"
+        - "&e[Evento] &7Boa sorte aos participantes!"
+      no-winner:
+        - "&e[Evento] &7Evento Hidden & Seek terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento Hidden & Seek finalizado!"
+        - "&e[Evento] &7O time dos {team} é o vencedor!"
+      choose-seeker:
+        - "&e[Evento] &cVocê é o caçador!"
+        - "&e[Evento] &7Encontre todos os jogadores escondidos"
+      choose-hider:
+        - "&e[Evento] &aSOBREVIVA!"
+        - "&e[Evento] &7Se esconda dos caçadores."
+      found:
+        - "&e[Evento] &cVocê foi encontrado!"
+        - "&e[Evento] &7Encontre os outros jogadores escondidos"
+      found-announce:
+        - "&e[Evento] &c{player} foi encontrado!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+    data:
+      seeker: ""
+      hider: ""
+      seeker-team-name: "Caçadores"
+      hider-team-name: "Escondidos"
+  paintball:
+    name: "Paintball"
+    type: PAINTBALL
+    calls: 2
+    calls-time: 10
+    min-players: 2
+    empty-inventory: true
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento Paintball!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento Paintball iniciou!"
+        - "&e[Evento] &7Boa sorte aos participantes!"
+      no-winner:
+        - "&e[Evento] &7Evento Paintball terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento Paintball finalizado!"
+        - "&e[Evento] &7O time {team} é vencedor!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+    data:
+      blue-team: ""
+      red-team: ""
+  potato:
+    name: "Potato"
+    type: POTATO
+    calls: 2
+    calls-time: 10
+    min-players: 2
+    empty-inventory: true
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento Potato!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento Potato iniciou!"
+        - "&e[Evento] &7O jogador {potato} está com a batata!"
+      new-potato:
+        - "&e[Evento] &7O jogador {potato} está com a batata!"
+      explode:
+        - "&e[Evento] &7O jogador {potato} explodiu!"
+      no-winner:
+        - "&e[Evento] &7Evento Potato terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento Potato finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+      corner1: ""
+      corner2: ""
+    data:
+      explode-time: 10
+      sound: BLOCK_NOTE_BLOCK_PLING
+  spleef:
+    name: "Spleef"
+    type: SPLEEF
+    calls: 2
+    calls-time: 10
+    min-players: 2
+    empty-inventory: false
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento Spleef!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento Spleef iniciou!"
+        - "&e[Evento] &7Em 10 segundos o evento começará!"
+      breaking:
+        - "&e[Evento] &7Evento Spleef iniciou!"
+        - "&e[Evento] &7Pode derrubar seus inimigos!"
+      no-winner:
+        - "&e[Evento] &7Evento Spleef terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento Spleef finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+      corner1: ""
+      corner2: ""
+    data:
+      allow-break-time: 10
+      schematic: "spleef.schem"
+  tntrun:
+    name: "TNTRun"
+    type: "TNTRUN"
+    calls: 3
+    calls-time: 10
+    min-players: 2
+    empty-inventory: false
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento TNTRun!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento TNTRun iniciou!"
+        - "&e[Evento] &7Boa sorte aos participantes!"
+      no-winner:
+        - "&e[Evento] &7Evento TNTRun terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento TNTRun finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+    data:
+      eliminate-y: 0
+      schematic: "tntrun.schem"
+  parkour:
+    name: "Parkour"
+    type: "PARKOUR"
+    calls: 5
+    calls-time: 30
+    min-players: 2
+    empty-inventory: false
+    rewards:
+      - "give {player} diamond 1"
+    time: 50
+    messages:
+      cancel:
+        - "&e[Evento] &7Evento Hidden & Seek cancelado!"
+        - "&e[Evento] &7O evento não pode ser iniciado!"
+      broadcast:
+        - "&e[Evento] &7Iniciando evento parkour!"
+        - "&e[Evento] &7Digite /evento para participar"
+        - "&e[Evento] &7Jogadores no evento: &f{players}"
+        - "&e[Evento] &7Chamadas restantes: &f{calls}"
+      start:
+        - "&e[Evento] &7Evento parkour iniciou!"
+        - "&e[Evento] &7Boa sorte aos participantes!"
+      no-winner:
+        - "&e[Evento] &7Evento parkour terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento parkour finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+      corner1: ""
+      corner2: ""
+  math:
+    name: "Matematica"
+    type: "MATH"
+    calls: 5
+    calls-time: 30
+    time: 50
+    empty-inventory: false
+    rewards:
+      - "give {player} diamond 1"
+    data:
+      min: 20
+      max: 1000
+    messages:
+      start:
+        - "&e[Evento] &7Evento matematica iniciou!"
+        - "&e[Evento] &7Resolva a equação: {sum}"
+      no-winner:
+        - "&e[Evento] &7Evento matematica terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento matematica finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+        - "&e[Evento] &7A resposta era {result}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
+  fastclick:
+    name: "FastClick"
+    type: "FASTCLICK"
+    calls: 2
+    calls-time: 10
+    time: 50
+    empty-inventory: false
+    rewards:
+      - "money give {player} 200"
+    data:
+      lines: 3
+      quantity: 10
+      click: "&a[X] "
+      no-click: "&c[X] "
+    messages:
+      start:
+        - "&e[Evento] &7Iniciou evento fastclick!"
+        - "&e[Evento] &7Clique na opção correta!"
+        - " {line1}"
+        - " {line2}"
+        - " {line3}"
+        - "&e[Evento] &7Prêmio: &2200 coins"
+      no-winner:
+        - "&e[Evento] &7Evento fastclick terminou!"
+        - "&e[Evento] &7Não há nenhum vencedor!"
+      winner:
+        - "&e[Evento] &7Evento fastclick finalizado!"
+        - "&e[Evento] &7O vencedor é {player}!"
+    locations:
+      lobby: ""
+      join: ""
+      leave: ""
