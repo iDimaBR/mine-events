@@ -1,6 +1,6 @@
 package com.github.idimabr.utils;
 
-import com.github.idimabr.VitinEvents;
+import com.github.idimabr.MineEvents;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
@@ -20,7 +20,7 @@ public class SchematicUtil {
 
     public static void paste(Location location, String schematicName) {
         try {
-            File schematicFile = new File(VitinEvents.getPlugin().getDataFolder() + "/schematics/", schematicName);
+            File schematicFile = new File(MineEvents.getPlugin().getDataFolder() + "/schematics/", schematicName);
 
             if (!schematicFile.exists()) {
                 throw new IllegalArgumentException("Schematic não encontrado: " + schematicName);

@@ -1,7 +1,6 @@
 package com.github.idimabr.models.events;
 
-import com.github.idimabr.VitinEvents;
-import com.github.idimabr.controllers.EventController;
+import com.github.idimabr.MineEvents;
 import com.github.idimabr.models.Cuboid;
 import com.github.idimabr.models.CustomEvent;
 import com.github.idimabr.models.EventType;
@@ -17,7 +16,6 @@ import org.bukkit.block.Block;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 
 import java.util.List;
 import java.util.Map;
@@ -39,7 +37,7 @@ public class SpleefEvent extends CustomEvent {
 
     public SpleefEvent(String name, String id, EventType type, boolean emptyInventory, int calls, int callTime, int time, int minPlayers, List<String> rewardCommands, Location lobbyLocation, Location joinLocation, Location leaveLocation, Location corner1, Location corner2, ItemStack[] kit, Map<String, Object> data) {
         super(name, id, type, emptyInventory, calls, callTime, time, minPlayers, rewardCommands, lobbyLocation, joinLocation, leaveLocation, corner1, corner2, kit, data);
-        final ConfigUtil config = VitinEvents.getPlugin().getConfig();
+        final ConfigUtil config = MineEvents.getPlugin().getConfig();
         this.section = config.getConfigurationSection("events." + id);
         this.breakAllowTime = (int) data.get("allow-break-time");
         this.schematic = getData().containsKey("schematic") ? (String) getData().get("schematic") : null;
@@ -145,7 +143,7 @@ public class SpleefEvent extends CustomEvent {
     }
 
     public void reset(){
-        VitinEvents.getPlugin().getController().setActualEvent(null);
+        MineEvents.getPlugin().getController().setActualEvent(null);
         for (UUID uuid : getParticipants()) {
             Player other = Bukkit.getPlayer(uuid);
             if (other != null && other.isOnline()) {

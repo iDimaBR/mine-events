@@ -15,10 +15,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 
 @Getter
-public final class VitinEvents extends JavaPlugin {
+public final class MineEvents extends JavaPlugin {
 
     @Getter
-    private static VitinEvents plugin;
+    private static MineEvents plugin;
     private EventController controller = new EventController();
     private ConfigUtil config;
 

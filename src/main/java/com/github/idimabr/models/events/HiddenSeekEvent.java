@@ -1,6 +1,6 @@
 package com.github.idimabr.models.events;
 
-import com.github.idimabr.VitinEvents;
+import com.github.idimabr.MineEvents;
 import com.github.idimabr.models.CustomEvent;
 import com.github.idimabr.models.EventType;
 import com.github.idimabr.utils.ConfigUtil;
@@ -37,7 +37,7 @@ public class HiddenSeekEvent extends CustomEvent {
     public HiddenSeekEvent(String name, String id, EventType type, boolean emptyInventory, int calls, int callTime, int time, int minPlayers, List<String> rewardCommands, Location lobbyLocation, Location joinLocation, Location leaveLocation, Location corner1, Location corner2, ItemStack[] kit, ItemStack[] kit2, Map<String, Object> data) {
         super(name, id, type, emptyInventory, calls, callTime, time, minPlayers, rewardCommands, lobbyLocation, joinLocation, leaveLocation, corner1, corner2, kit, data);
         setKit2(kit2);
-        final ConfigUtil config = VitinEvents.getPlugin().getConfig();
+        final ConfigUtil config = MineEvents.getPlugin().getConfig();
         this.section = config.getConfigurationSection("events." + id);
         this.seekerLocation = LocationUtil.deserialize((String) data.get("seeker"));
         this.hiderLocation = LocationUtil.deserialize((String) data.get("hider"));

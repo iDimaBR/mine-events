@@ -1,6 +1,6 @@
 package com.github.idimabr.models.events;
 
-import com.github.idimabr.VitinEvents;
+import com.github.idimabr.MineEvents;
 import com.github.idimabr.models.CustomEvent;
 import com.github.idimabr.models.EventType;
 import com.github.idimabr.utils.ConfigUtil;
@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FastClickEvent extends CustomEvent {
@@ -37,7 +36,7 @@ public class FastClickEvent extends CustomEvent {
     public FastClickEvent(String name, String id, EventType type, boolean emptyInventory, int calls, int callTime, int time, int minPlayers, List<String> rewardCommands, Location lobbyLocation, Location joinLocation, Location leaveLocation, Location corner1, Location corner2, ItemStack[] kit, Map<String, Object> data) {
         super(name, id, type, emptyInventory, calls, callTime, time, minPlayers, rewardCommands, lobbyLocation, joinLocation, leaveLocation, corner1, corner2, kit, data);
 
-        final ConfigUtil config = VitinEvents.getPlugin().getConfig();
+        final ConfigUtil config = MineEvents.getPlugin().getConfig();
         this.section = config.getConfigurationSection("events." + id);
 
         this.clickable = (String) data.get("click");
@@ -138,7 +137,7 @@ public class FastClickEvent extends CustomEvent {
     }
 
     public void reset(){
-        VitinEvents.getPlugin().getController().setActualEvent(null);
+        MineEvents.getPlugin().getController().setActualEvent(null);
         setOpen(false);
         setRunning(false);
         setWinner(null);

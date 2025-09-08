@@ -1,6 +1,6 @@
 package com.github.idimabr.models.events;
 
-import com.github.idimabr.VitinEvents;
+import com.github.idimabr.MineEvents;
 import com.github.idimabr.models.CustomEvent;
 import com.github.idimabr.models.EventType;
 import com.github.idimabr.utils.ConfigUtil;
@@ -9,14 +9,11 @@ import com.github.idimabr.utils.Task;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MathEvent extends CustomEvent {
@@ -29,7 +26,7 @@ public class MathEvent extends CustomEvent {
 
     public MathEvent(String name, String id, EventType type, boolean emptyInventory, int calls, int callTime, int time, int minPlayers, List<String> rewardCommands, Location lobbyLocation, Location joinLocation, Location leaveLocation, Location corner1, Location corner2, ItemStack[] kit, Map<String, Object> data) {
         super(name, id, type, emptyInventory, calls, callTime, time, minPlayers, rewardCommands, lobbyLocation, joinLocation, leaveLocation, corner1, corner2, kit, data);
-        final ConfigUtil config = VitinEvents.getPlugin().getConfig();
+        final ConfigUtil config = MineEvents.getPlugin().getConfig();
         this.section = config.getConfigurationSection("events." + id);
         reset();
     }
@@ -94,7 +91,7 @@ public class MathEvent extends CustomEvent {
     }
 
     public void reset(){
-        VitinEvents.getPlugin().getController().setActualEvent(null);
+        MineEvents.getPlugin().getController().setActualEvent(null);
         setOpen(false);
         setRunning(false);
         setWinner(null);

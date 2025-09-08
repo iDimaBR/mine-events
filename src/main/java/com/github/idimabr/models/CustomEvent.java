@@ -1,7 +1,6 @@
 package com.github.idimabr.models;
 
-import com.github.idimabr.VitinEvents;
-import com.github.idimabr.controllers.EventController;
+import com.github.idimabr.MineEvents;
 import com.github.idimabr.utils.ConfigUtil;
 import com.github.idimabr.utils.LocationUtil;
 import lombok.Getter;
@@ -61,7 +60,7 @@ public abstract class CustomEvent {
         this.corner2 = corner2;
         this.kit = kit;
         this.data = data != null ? data : new HashMap<>();
-        final ConfigUtil config = VitinEvents.getPlugin().getConfig();
+        final ConfigUtil config = MineEvents.getPlugin().getConfig();
         this.section = config.getConfigurationSection("events." + id);
     }
 

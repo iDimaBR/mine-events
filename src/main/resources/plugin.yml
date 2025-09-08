@@ -1,6 +1,6 @@
-name: VitinEvents
+name: MineEvents
 version: '${project.version}'
-main: com.github.idimabr.VitinEvents
+main: com.github.idimabr.MineEvents
 authors: [Rapha(iDimaBR)]
 commands:
   aevento:
